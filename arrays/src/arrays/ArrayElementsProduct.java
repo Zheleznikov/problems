@@ -50,8 +50,6 @@ public class ArrayElementsProduct {
 //                    }
 //                });
         return stream(arr).reduce(1, (subtotal, current) -> current == 0 ? subtotal : subtotal * current);
-
-
     }
 
 

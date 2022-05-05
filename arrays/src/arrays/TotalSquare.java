@@ -8,12 +8,28 @@ public class TotalSquare {
     public static void main(String[] args) {
         System.out.println(calcTotalSquare(10));
         System.out.println(calcTotalSquare2(10));
-
         System.out.println(calcTotalSquare(10000000));
-
-
-
     }
+
+    /**
+     * Problem - calculate sum of items in array
+     * e.g.
+     *  [1,5,8, 12, 0] - > 1 + 5 + 8 + 12 + 0 = 26
+     *
+     */
+
+    public static int calcItemsSum() {
+        // step 1 - create variable - counter to increase
+        String sum;
+
+        // step 2 - create loop
+
+
+
+
+        return 0;
+    }
+
 
     /**
      * Задача - посчитать сумму квадратов чисел от 1 до n
