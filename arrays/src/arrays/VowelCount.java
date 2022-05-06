@@ -1,39 +1,35 @@
 package arrays;
 
-import java.awt.*;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.stream.Stream;
+import java.util.stream.IntStream;
 
 public class VowelCount {
+    // difference between data types
+    // contains
+    // filter
+    // indexOf
 
     public static void main(String[] args) {
-//        System.out.println(getCount(""));
-        System.out.println("dfgdfg".contains(""));
+
     }
 
     public static int getCount(String str) {
-        if (str.length() == 0) {
-            return 0;
-        }
         int vowelsCount = 0;
-        String vowels = "aeiou";
-        for (String letter : str.split("")) {
-            System.out.println(letter);
-            System.out.println(vowels.contains(letter));
-            if (vowels.contains(letter)) {
+        String vowelsAsString = "aeuio";
+        for (int i = 0; i < str.length(); i++) {
+            char currentChar = str.charAt(i);
+            String currentCharAsString = String.valueOf(currentChar);
+
+            if (vowelsAsString.contains(currentCharAsString)) {
                 vowelsCount++;
             }
         }
+
         return vowelsCount;
 
-//
-//
-//        for (int i = 0; i < vowelsArray.length - 1; i ++) {
-//            if (str.contains(vowelsArray[i])) vowelsCount++;
-//        }
-//        return vowelsCount;
+    }
+
+    public static int getCountAdvanced(String str) {
+        return (int) str.chars().filter(letter -> "aeuio".indexOf(letter) != -1).count();
     }
 }
-
-
